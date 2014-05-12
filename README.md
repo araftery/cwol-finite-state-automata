@@ -1,4 +1,4 @@
-This is a simulation of the envelope game described in [this paper](https://dl.dropboxusercontent.com/u/22769456/CWOL.pdf). It uses finite state automata to model strategies, and is implemented in Python.
+This is a simulation of the envelope game described in [this paper](https://dl.dropboxusercontent.com/u/22769456/CWOL.pdf). It uses finite state automata to model strategies and is implemented in Python.
 
 ## Structure
 File | Description
