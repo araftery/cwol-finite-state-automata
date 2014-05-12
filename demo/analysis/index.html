@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.stat_line
+{
+  stroke:black;
+  stroke-width:2px;
+  fill:transparent;
+}
+
+body > div
+{
+  margin-left:10px;
+}
+
+
+.legend-box
+{
+    fill: #fff !important;
+    background: #fff !important;
+}
+.legend-box
+{
+    stroke:black;
+}
+.legend-box text
+{
+    fill:black;
+}
+
+.options
+{
+  float:left;
+}
+
+.legend_svg
+{
+  float:left;
+}
+
+svg:not(.legend_svg)
+{
+  clear:both;
+}
+
+
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<body>
+
+<table class="table table-striped table-bordered setup_vars">
+<tr>
+  <th>a</th>
+  <th>b</th>
+  <th>c<sub>h</sub></th>
+  <th>c<sub>l</sub></th>
+  <th>d</th>
+  <th>file prefix</th>
+  <th>gens</th>
+  <th>milestone</th>
+  <th>mutate prob</th>
+  <th>p</th>
+  <th>pop</th>
+  <th>selection strength</th>
+  <th>ω</th>
+  <th>Player 1 Seed</th>
+  <th>Player 2 Seed</th>
+</tr>
+<tr>
+  <td class="setup_a"></td>
+  <td class="setup_b"></td>
+  <td class="setup_c_h"></td>
+  <td class="setup_c_l"></td>
+  <td class="setup_d"></td>
+  <td class="setup_file_prefix"></td>
+  <td class="setup_generations"></td>
+  <td class="setup_milestone"></td>
+  <td class="setup_mutate_prob"></td>
+  <td class="setup_p"></td>
+  <td class="setup_pop"></td>
+  <td class="setup_selection_strength"></td>
+  <td class="setup_w"></td>
+  <td class="setup_player1_seed"></td>
+  <td class="setup_player2_seed"></td>
+</tr>
+</table>
+
+<div>
+      <h1>Player 1 - <span class="cooperates_stats"></span></h1>
+      <table class="options">
+        <tr>
+          <td>Line:</td>
+          <td><input type="radio" name="line1" id="line1_total" value="total" checked /> % Cooperation <input type="radio" id="line1_at_all" name="line1" value="at_all" /> % Cooperation at All <input type="radio" id="line1_hide" name="line1" value="hide" />Hide</td>
+        </tr>
+
+        <tr>
+          <td>Area Chart:</td>
+          <td><input type="radio" name="area_chart1" id="area_chart1_show" value="show" checked /> Show <input type="radio" id="area_chart1_hide" name="area_chart1" value="hide" /> Hide</td>
+        </tr>
+
+        <tr>
+          <td>Defection:</td>
+          <td><input type="radio" name="defection1" id="defection1_differentiate" value="differentiate" checked /> Differentiate <input type="radio" id="defection1_combine" name="defection1" value="at_all" /> Combine</td>
+        </tr>
+      </table>
+
+  <svg class="svg1"></svg>
+</div>
+
+<div>
+      <h1>Player 2 - <span class="continues_stats"></span></h1>
+
+      <table class="options">
+        <tr>
+          <td>Line:</td>
+          <td><input type="radio" name="line2" id="line2_total" value="total" checked /> % Continue <input type="radio" id="line2_at_all" name="line2" value="at_all" /> % Continue at All <input type="radio" id="line2_hide" name="line2" value="hide" />Hide</td>
+        </tr>
+
+        <tr>
+          <td>Area Chart:</td>
+          <td><input type="radio" name="area_chart2" id="area_chart2_show" value="show" checked /> Show <input type="radio" id="area_chart2_hide" name="area_chart2" value="hide" /> Hide</td>
+        </tr>
+      </table>
+
+  <svg class="svg2"></svg>
+</div>
+
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="d3.legend.js"></script>
+<script src="analyze.js"></script>
+<style type="text/css">
+.overlay
+{
+    fill:transparent;
+}
+
+.focus
+{
+    stroke:black;
+    fill:red;
+    z-index:1000;
+    stroke-width:2;
+}
+
+input[type="radio"]
+{
+  margin-right:5px;
+  margin-left:5px;
+}
+</style>
+</body>
