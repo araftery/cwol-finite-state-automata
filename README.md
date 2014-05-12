@@ -28,7 +28,7 @@ This is a stacked [area chart](http://en.wikipedia.org/wiki/Area_chart) of strat
 This line chart shows the percentage of moves in each generation that were "cooperate." By choosing "% Cooperate at All," the line will switch to show the percentage of *games* in each generation in which "cooperate" was played *at least once*.
 
 By hovering the cursor over the graph, the user can select a generation. Clicking will bring the user to a page showing the total population at that generation, with visualizations of the strategies in the population.
->Note: the included demo analysis does not include visualizations of strategies in order to keep the repo to a reasonable file size. These visualizations can get up to several GB in size. In order to generate these visualizations for the demo data, `cd` to the repo directory and execute: `python analyze.py ./demo/`.*
+>Note: the included demo analysis does not include visualizations of strategies in order to keep the repo to a reasonable file size. These visualizations can get up to several GB in size. In order to generate these visualizations for the demo data, `cd` to the repo directory and execute: `python analyze.py ./demo/`.
 
 Visualizations for Player 1 strategies look like:
 
