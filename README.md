@@ -44,4 +44,4 @@ Visualizations for Player 2 strategies look like:
 	* This is only required for generating visualizations of automata
 
 ## Contact
-* If you have any questions, feel free to contact me at andrewra<span style="display:none;">nospam</span>ftery@gmail.com
+* If you have any questions, feel free to contact me at andrewraftery@gmail.com
