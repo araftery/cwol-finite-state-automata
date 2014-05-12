@@ -7,7 +7,7 @@ var x = d3.scale.linear()
     .range([0, width]);
 
 var x_reverse = d3.scale.linear()
-                .domain([left_padding, width + left_padding])
+                .domain([0, width])
 
 var y = d3.scale.linear()
     .range([height, 0]);
@@ -271,6 +271,7 @@ d3.json('setup_vars.json', function(setup_vars){
         .attr("class", "overlay")
         .attr("width", width)
         .attr("height", height)
+        .attr("transform", "translate(" + left_padding + ", " + top_padding  + ")")
         .on("mousemove", mousemove)
         .on("click", open_analysis);
 
@@ -374,15 +375,11 @@ d3.json('setup_vars.json', function(setup_vars){
         .call(yAxis);
 
 
-
-
-
-
       function mousemove() {
         var x_pos = d3.mouse(this)[0];
         var gen = Math.ceil(x_reverse(x_pos) / setup_vars['milestone']) * setup_vars['milestone'];
         d3.selectAll('.gen_num').text("Generation: " + gen);
-        var x_pos = x(gen);
+        var x_pos = x(gen) + left_padding;
         d3.selectAll('.hoverline')
           .attr("x1", x_pos)
           .attr("x2", x_pos)
