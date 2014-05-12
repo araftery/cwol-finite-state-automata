@@ -7,7 +7,7 @@ var x = d3.scale.linear()
     .range([0, width]);
 
 var x_reverse = d3.scale.linear()
-                .domain([0, width])
+                .domain([left_padding, width + left_padding])
 
 var y = d3.scale.linear()
     .range([height, 0]);
