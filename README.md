@@ -39,7 +39,7 @@ Visualizations for Player 2 strategies look like:
 <img src="http://araftery.s3.amazonaws.com/cwol_fsm/player2_strategy.png" style="width:100%;" />
 
 ## Requirements
-* Required Python modules are listed in `requirements.txt`
+* Required Python modules are listed in `requirements.txt`. These can be installed by `cd`ing to the repo directory and executing `[sudo] pip install -r requirements.txt`.
 * In addition, for the PygraphViz library, [graphviz](http://www.graphviz.org/) is required
 	* This is only required for generating visualizations of automata
 
