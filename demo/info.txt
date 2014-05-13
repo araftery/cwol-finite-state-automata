@@ -1,13 +1,13 @@
 Finished Normally: True
-Time Started: 1399852001
-Time Finished: 1399852269
-Runtime (minutes): 4.467
+Time Started: 1399993225
+Time Finished: 1399993448
+Runtime (minutes): 3.717
 Generations: 10000
-Total Coop at All (since last milestone): 117
-Total Cont at All (since last milestone): 3174
-Total Coop Moves (since last milestone): 136
-Total Cont Moves (since last milestone): 9349
-Total moves (since last milestone): 30805
+Total Coop at All (since last milestone): 615
+Total Cont at All (since last milestone): 1972
+Total Coop Moves (since last milestone): 2660
+Total Cont Moves (since last milestone): 13586
+Total moves (since last milestone): 34685
 Setup Variables:
 	c_h: 12.0
 	c_l: 4.0

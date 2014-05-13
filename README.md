@@ -40,8 +40,9 @@ Visualizations for Player 2 strategies look like:
 
 ## Requirements
 * Required Python modules are listed in `requirements.txt`. These can be installed by `cd`ing to the repo directory and executing `[sudo] pip install -r requirements.txt`.
-* In addition, for the PygraphViz library, [graphviz](http://www.graphviz.org/) is required
+* In addition, for the PygraphViz library, [graphviz](http://www.graphviz.org/), and in some cases, pkgconfig, are required
 	* This is only required for generating visualizations of automata
+    * To install pkgconfig on Linux/Ubuntu, run `sudo apt-get install pkg-config`. On OSX, install [Homebrew](http://brew.sh/) and run `brew install pkgconfig`
 
 ## Contact
 * If you have any questions, feel free to contact me at andrewraftery@gmail.com

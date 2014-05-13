@@ -153,40 +153,7 @@ def run_simulation(p, a, c_l, c_h, b, d, w, pop, selection_strength, mutate_prob
 
             player2_pop = new_player2_pop
 
-            #####
-            #
-            # MUTATE
-            #
-            #####
-
-            # don't mutate on the last generation
-            if gen < generations - 1:
-
-                for player1 in player1_pop:
-                    if utils.probability(mutate_prob):
-                        mutation = random.choice(mutations)
-                        if mutation == 'alter_strategy':
-                            player1.alter_strategy()
-                        elif mutation == 'alter_action':
-                            player1.alter_action()
-                        elif mutation == 'delete_state':
-                            player1.delete_state()
-                        elif mutation == 'add_state':
-                            player1.add_state()
-
-                for player2 in player2_pop:
-                    if utils.probability(mutate_prob):
-                        mutation = random.choice(mutations)
-                        if mutation == 'alter_strategy':
-                            player2.alter_strategy()
-                        elif mutation == 'alter_action':
-                            player2.alter_action()
-                        elif mutation == 'delete_state':
-                            player2.delete_state()
-                        elif mutation == 'add_state':
-                            player2.add_state()
-
-            # if the generation is a milestone, save the populations and record some stats
+                        # if the generation is a milestone, save the populations and record some stats
             if gen % milestone == 0:
 
                 now = calendar.timegm(datetime.datetime.now().utctimetuple())
@@ -242,6 +209,40 @@ def run_simulation(p, a, c_l, c_h, b, d, w, pop, selection_strength, mutate_prob
                     print 'Generation {} ({} mins.)'.format(gen, gen_runtime)
 
                 prev_gen_time = calendar.timegm(datetime.datetime.now().utctimetuple())
+
+            #####
+            #
+            # MUTATE
+            #
+            #####
+
+            # don't mutate on the last generation
+            if gen < generations - 1:
+
+                for player1 in player1_pop:
+                    if utils.probability(mutate_prob):
+                        mutation = random.choice(mutations)
+                        if mutation == 'alter_strategy':
+                            player1.alter_strategy()
+                        elif mutation == 'alter_action':
+                            player1.alter_action()
+                        elif mutation == 'delete_state':
+                            player1.delete_state()
+                        elif mutation == 'add_state':
+                            player1.add_state()
+
+                for player2 in player2_pop:
+                    if utils.probability(mutate_prob):
+                        mutation = random.choice(mutations)
+                        if mutation == 'alter_strategy':
+                            player2.alter_strategy()
+                        elif mutation == 'alter_action':
+                            player2.alter_action()
+                        elif mutation == 'delete_state':
+                            player2.delete_state()
+                        elif mutation == 'add_state':
+                            player2.add_state()
+
 
     except KeyboardInterrupt:
         finished_normally = False
